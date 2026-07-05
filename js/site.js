@@ -86,16 +86,22 @@
     }
 
     // ---------- Scroll spy ----------
-    var sections = Array.from(document.querySelectorAll('main section[id]'));
+    var sections = Array.from(document.querySelectorAll('main section[id], main h2[id]'));
     var navLinks = Array.from(document.querySelectorAll('.nav a.navlink'));
+
     function setActive() {
         var y = window.scrollY + 90;
         var current = sections[0] && sections[0].id;
-        sections.forEach(function (s) { if (s.offsetTop <= y) current = s.id; });
+
+        sections.forEach(function (s) {
+            if (s.offsetTop <= y) current = s.id;
+        });
+
         navLinks.forEach(function (a) {
             a.classList.toggle('active', a.getAttribute('href') === '#' + current);
         });
     }
+
     window.addEventListener('scroll', setActive, { passive: true });
     setActive();
 })();

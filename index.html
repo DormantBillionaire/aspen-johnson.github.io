@@ -43,22 +43,6 @@
         gtag('js', new Date());
         gtag('config', 'G-715QQ7T5Z9');
 
-        const names = [
-            "Aspen Johnson",
-            "Aspen Johnson · 阿斯彭·约翰逊",
-            "Aspen Johnson · アスペン・ジョンソン",
-            "Aspen Johnson · 아스펜 존슨",
-            "Aspen Johnson · Аспен Джонсон",
-            "Aspen Johnson · أسبن جونسون"
-        ];
-
-        let index = 0;
-        const nameElement = document.getElementById("name-rotator");
-
-        setInterval(() => {
-            index = (index + 1) % names.length;
-            nameElement.textContent = names[index];
-        }, 2500);
     </script>
 </head>
 
@@ -70,8 +54,10 @@
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">☰</button>
         <ul id="nav-list">
             <li><a class="navlink" href="#about">About</a></li>
+            <li><a class="navlink" href="#news">News</a></li>
             <li><a class="navlink" href="#publications">Publications</a></li>
-            <li><a class="navlink" href="/tools/">Tools</a></li>
+            <li><a class="navlink" href="#projects">Projects</a></li>
+            <!-- <li><a class="navlink" href="#Somethingsomething">Tools</a></li> -->
             <li>
                 <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">☾</button>
             </li>
@@ -109,27 +95,28 @@
         </div>
 
         <hr />
-
-        <h2 class="section-label">News</h2>
-        <ul class="news" aria-label="Recent news">
-            <li>
-                <span class="date">March 2026</span>
-                <span class="body">Accepted as 1 of 15 papers to present at the Atlanta Research Conference.</span>
-            </li>
-            <li>
-                <span class="date">March 2026</span>
-                <span class="body">Committed to return to play basketball at VSU! <a href="https://www.instagram.com/p/DYSrTMavdnm/"></a>.</span>
-            </li>
-            <li>
-                <span class="date">Feb 2026</span>
-                <span class="body">Admitted to study at the University of Florida for Mathematics and Physics in the Fall 2026 .</span>
-            </li>
-
-            <li>
-                <span class="date">Dec 2025</span>
-                <span class="body">Our paper, <a href="https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928">An empirical application of improved gradient scaling for score-driven...</a>, is published at <a href="https://www.tandfonline.com/">Applied Economics Journal</a>!</span>
-            </li>
-        </ul>
+    <!-- ==================== NEWS ==================== -->
+        <section id="news" class="section">
+            <h2 class="section-label">News</h2>
+            <ul class="news" aria-label="Recent news">
+                <li>
+                    <span class="date">March 2026</span>
+                    <span class="body">Accepted as 1 of 15 papers to present at the Atlanta Research Conference.</span>
+                </li>
+                <li>
+                    <span class="date">March 2026</span>
+                    <span class="body">Committed to return to play basketball at VSU! <a href="https://www.instagram.com/p/DYSrTMavdnm/"></a>.</span>
+                </li>
+                <li>
+                    <span class="date">Feb 2026</span>
+                    <span class="body">Admitted to study at the University of Florida for Mathematics and Physics in the Fall 2026.</span>
+                </li>
+                <li>
+                    <span class="date">Dec 2025</span>
+                    <span class="body">Our paper, <a href="https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928">An empirical application of improved gradient scaling for score-driven...</a>, is published at <a href="https://www.tandfonline.com/">Applied Economics Letters</a>!</span>
+                </li>
+            </ul>
+        </section>
     </section>
 
     <!-- ==================== PUBLICATIONS ==================== -->
@@ -144,46 +131,158 @@
 
         <ul class="pub-list" data-view="selected">
 
-            <!-- 2025 · Score-driven volatility filters -->
-<li class="pub selected">
-    <div class="thumb wide-figure">
-        <img src="img/paper_published_graph.png" alt="Score-driven volatility filters paper teaser" loading="lazy" />
-    </div>
+        <!-- 2025 · Score-driven volatility filters -->
+        <li class="pub selected">
+            <div class="thumb wide-figure">
+                <img src="img/paper_published_graph.png" alt="Score-driven volatility filters paper teaser" loading="lazy" />
+            </div>
 
-    <div class="meta">
-        <h3>
-            <a href="https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928">
-                An empirical application of improved gradient scaling for score-driven volatility filters
-            </a>
-        </h3>
+            <div class="meta">
+                <h3>
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928">
+                        An empirical application of improved gradient scaling for score-driven volatility filters
+                    </a>
+                </h3>
 
-        <p class="authors">
-            <a href="https://business.mercer.edu/faculty-and-insights/faculty-directory/dr-szabolcs-blazsek/">Szabolcs Blazsek</a>,
-            <a href="https://www.linkedin.com/in/aspenjjohnson/">Aspen Johnson</a>,
-            <a href="https://www.linkedin.com/in/adamkobor/">Adam Kobor</a>
-        </p>
+                <p class="authors">
+                    <a href="https://business.mercer.edu/faculty-and-insights/faculty-directory/dr-szabolcs-blazsek/">Szabolcs Blazsek</a>,
+                    <a href="https://www.linkedin.com/in/aspenjjohnson/">Aspen Johnson</a>,
+                    <a href="https://www.linkedin.com/in/adamkobor/">Adam Kobor</a>
+                </p>
 
-        <p class="venue">
-            <span class="badge">Applied Economics Letters · 2025</span>
-        </p>
+                <p class="venue">
+                    <span class="badge">Applied Economics Letters · 2025</span>
+                </p>
 
-        <div class="buttons">
-            <a class="pill" href="https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928">paper</a>
-            <button class="pill" type="button" data-bibtex-toggle="bib-gradient-filters" aria-expanded="false">bibtex</button>
+                <div class="buttons">
+                    <a class="pill" href="https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928">paper</a>
+                    <button class="pill" type="button" data-bibtex-toggle="bib-gradient-filters" aria-expanded="false">bibtex</button>
+                </div>
+
+                <div class="bibtex" id="bib-gradient-filters">
+                    <pre>@article{blazsek2025gradient,
+                title   = {An empirical application of improved gradient scaling for score-driven volatility filters},
+                author  = {Blazsek, Szabolcs and Johnson, Aspen and Kobor, Adam},
+                journal = {Applied Economics Letters},
+                year    = {2025},
+                doi     = {10.1080/13504851.2025.2606928}
+            }</pre>
+                    </div>
+            </div>
+        </li>
+                </ul>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section">
+        <div class="projects-header">
+            <h2 class="section-label">Projects</h2>
         </div>
 
-        <div class="bibtex" id="bib-gradient-filters">
-            <pre>@article{blazsek2025gradient,
-    title   = {An empirical application of improved gradient scaling for score-driven volatility filters},
-    author  = {Blazsek, Szabolcs and Johnson, Aspen and Kobor, Adam},
-    journal = {Applied Economics Letters},
-    year    = {2025},
-    doi     = {10.1080/13504851.2025.2606928}
-}</pre>
+        <div class="project-list">
+
+            <article class="project-row">
+                <div class="project-thumb">
+                    <img src="img/projects/basketball-analytics.jpg" alt="Basketball scouting predictor project" loading="lazy" />
+                </div>
+
+                <div class="project-info">
+                    <h3>
+                        <a href="#">Basketball Scouting Predictor</a>
+                    </h3>
+
+                    <p class="project-meta">
+                        Machine Learning · Sports Analytics · Computer Vision
+                    </p>
+
+                    <p class="project-links">
+                        <a href="#">project</a> / 
+                        <a href="#">code</a> / 
+                        <a href="#">notes</a>
+                    </p>
+
+                    <p class="project-desc">
+                        Developing a machine learning-based scouting tool to predict player movement tendencies and decision-making patterns from prior game film and scouting data.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-row">
+                <div class="project-thumb">
+                    <img src="img/projects/assistive-tech.jpg" alt="Assistive listening technology project" loading="lazy" />
+                </div>
+
+                <div class="project-info">
+                    <h3>
+                        <a href="#">Assistive Listening Technology for Athletes</a>
+                    </h3>
+
+                    <p class="project-meta">
+                        Assistive Technology · Human-Centered Engineering · Audio Systems
+                    </p>
+
+                    <p class="project-links">
+                        <a href="#">project</a> / 
+                        <a href="#">notes</a>
+                    </p>
+
+                    <p class="project-desc">
+                        Exploring communication-support tools for deaf and hard-of-hearing athletes in practice and game environments.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-row">
+                <div class="project-thumb">
+                    <img src="img/projects/seismicity.jpg" alt="Seismicity time-series modeling project" loading="lazy" />
+                </div>
+
+                <div class="project-info">
+                    <h3>
+                        <a href="#">Seismicity Time-Series Modeling</a>
+                    </h3>
+
+                    <p class="project-meta">
+                        Computational Science · Time-Series Modeling · Econometrics
+                    </p>
+
+                    <p class="project-links">
+                        <a href="#">project</a> / 
+                        <a href="#">notes</a>
+                    </p>
+
+                    <p class="project-desc">
+                        Studying long-memory dynamics in earthquake time series and exploring how statistical methods can be applied to geophysical systems.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-row">
+                <div class="project-thumb">
+                    <img src="img/projects/atomic-simulations.jpg" alt="Atomic and particle simulations project" loading="lazy" />
+                </div>
+
+                <div class="project-info">
+                    <h3>
+                        <a href="#">Atomic & Particle Simulations</a>
+                    </h3>
+
+                    <p class="project-meta">
+                        Physics · Molecular Dynamics · Computational Modeling
+                    </p>
+
+                    <p class="project-links">
+                        <a href="#">project</a> / 
+                        <a href="#">notes</a>
+                    </p>
+
+                    <p class="project-desc">
+                        Learning molecular dynamics concepts including velocity autocorrelation functions and computational approaches for studying physical behavior at small scales.
+                    </p>
+                </div>
+            </article>
+
         </div>
-    </div>
-</li>
-        </ul>
     </section>
 
 </main>

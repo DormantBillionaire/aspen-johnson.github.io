@@ -75,6 +75,11 @@ body {
     text-rendering: optimizeLegibility;
     font-feature-settings: "ss01", "cv05", "cv11";
 }
+section,
+#news {
+    scroll-margin-top: 90px;
+}
+
 h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; }
 p { margin: 0 0 1.05em; }
 a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-weak); transition: border-color .15s ease, color .15s ease; }
@@ -393,6 +398,123 @@ section.section + section.section { border-top: 1px solid var(--rule); }
     .news { grid-template-columns: 1fr; row-gap: 4px; }
     .news .date { padding-top: 10px; font-weight: 500; }
     .wrap, .nav .inner, .site-footer .inner { padding-left: 26px; padding-right: 26px; }
+}
+
+/* ---------- Projects list ---------- */
+.projects-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 26px;
+}
+
+.projects-header .section-label {
+    margin: 0;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.project-thumb {
+    width: 220px;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: var(--card);
+    box-shadow: var(--shadow);
+}
+
+.project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.25s ease;
+}
+
+.project-row:hover .project-thumb img {
+    transform: scale(1.03);
+}
+
+.project-info h3 {
+    margin: 0 0 8px;
+    font-family: var(--font-sans);
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.project-info h3 a {
+    color: var(--accent);
+    border-bottom: 0;
+}
+
+.project-info h3 a:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+.project-meta {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.project-links {
+    margin: 0 0 14px;
+    font-size: 15px;
+}
+
+.project-links a {
+    color: var(--accent);
+    border-bottom: 0;
+}
+
+.project-links a:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+.project-desc {
+    max-width: 760px;
+    margin: 0;
+    color: var(--ink);
+    font-size: 16.5px;
+    line-height: 1.65;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    .project-list {
+        gap: 42px;
+    }
+
+    .project-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-thumb {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
+    }
 }
 
 /* ---------- Contact / Calendly ---------- */
